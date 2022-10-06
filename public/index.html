@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="post" action="/">
+        <input id="num1" name="firstNum"/>
+        <div>
+            <input type="radio" id="plus_radio" name="operation" value="+">
+            <label for="plus_radio">+</label>
+        
+            <input type="radio" id="minus_radio" name="operation" value="-">
+            <label for="minus_radio">-</label>
+        
+            <input type="radio" id="multiply_radio" name="operation" value="*">
+            <label for="multiply_radio">*</label>
+
+            <input type="radio" id="divide_radio" name="operation" value="/">
+            <label for="divide_radio">/</label>
+          </div>
+          
+        <input id="num2" name="secNum"/>
+        <input type="submit" value="Результат">
+    </form>
+<p id="result" name = "result" style ="visibility: hidden;" >Результат = {result}</p>
+</body>
+</html>
+<script>
+    window.onload = function() {
+        let result = document.getElementById("result");
+        if (result.innerHTML == "Результат = {result}"){
+            result.style = "visibility: hidden";
+        }
+        else
+            result.style = "visibility: visible";
+        console.log(result.innerHTML);
+    }
+</script>
